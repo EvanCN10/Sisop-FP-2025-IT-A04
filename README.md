@@ -18,10 +18,10 @@
 
 Nama | NRP
 --- | ---
-Nama Anggota 1 | 5027241xxx
-Nama Anggota 2 | 5027241xxx
-Nama Anggota 3 | 5027241xxx
-Nama Anggota 4 | 5027241xxx
+Oscaryavat Viryavan | 5027241053
+Evan Christian Nainggolan | 5027241026
+Mey Rosalina | 5027241004
+Mutiara Diva Jaladita | 5027241083
 
 ## Deskripsi Soal
 
