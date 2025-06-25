@@ -254,7 +254,7 @@ Program akan menghasilkan output seperti:
 
 **Video Menjalankan Program**
 
-[Link video demonstrasi program - akan diupload setelah testing]
+[[Link video demonstrasi program - akan diupload setelah testing]](https://github.com/EvanCN10/Sisop-FP-2025-IT-A04/blob/main/video1740526893%20(1).mp4)
 
 ## Daftar Pustaka
 
