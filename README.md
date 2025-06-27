@@ -267,3 +267,9 @@ https://youtu.be/I5RwueNTwR4
 4. Linux Manual Pages. "waitpid(2) - Linux manual page." https://man7.org/linux/man-pages/man2/waitpid.2.html
 
 5. Linux Manual Pages. "fork(2) - Linux manual page." https://man7.org/linux/man-pages/man2/fork.2.html
+
+# Modifikasi
+Modifikasi terhadap zombie cleaner deamon yang sebelumnnya ada 5 child process yang menjadi zombie sekarang di ubah hanya child dengan ID genap (2 dan 4) yang akan → menjadi zombie, sebaliknya child dengan ID ganjil (1, 3, 5) tidak jadi zombie
+
+**Bagian yang ```dimodivikasi``` dari Versi Sebelumnya**
+
