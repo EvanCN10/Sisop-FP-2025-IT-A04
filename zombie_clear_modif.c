@@ -1,4 +1,3 @@
-```
 /*
  * Zombie Cleaner Daemon
  * Final Project Sistem Operasi IT
@@ -351,4 +350,3 @@ int main(int argc, char *argv[]) {
     printf("\nDaemon stopped. Check '%s' for complete log.\n", LOG_FILE);
     return 0;
 }
-```
