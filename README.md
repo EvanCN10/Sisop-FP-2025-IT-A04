@@ -269,7 +269,41 @@ https://youtu.be/I5RwueNTwR4
 5. Linux Manual Pages. "fork(2) - Linux manual page." https://man7.org/linux/man-pages/man2/fork.2.html
 
 # Modifikasi
-Modifikasi terhadap zombie cleaner deamon yang sebelumnnya ada 5 child process yang menjadi zombie sekarang di ubah hanya child dengan ID genap (2 dan 4) yang akan → menjadi zombie, sebaliknya child dengan ID ganjil (1, 3, 5) tidak jadi zombie
+Studi kasus dari Bu Henning memodifikasi program ```Zombie Cleaner Daemon``` yang sebelumnya membuat 5 child process yang semuanya menjadi zombie. Pada versi modifikasi ini, hanya *child* dengan **ID genap (2 dan 4)** yang akan menjadi zombie, sedangkan *child* dengan **ID ganjil (1, 3, dan 5)** tetap aktif dan tidak menjadi zombie.
 
 **Bagian yang ```dimodivikasi``` dari Versi Sebelumnya**
 
+```
+void child_process(int child_id) {
+    char msg[256];
+    snprintf(msg, sizeof(msg), "Child %d (PID: %d) started", child_id, getpid());
+    log_message(msg);
+
+    srand(getpid() + time(NULL));
+
+    int sleep_time;
+    if (child_id % 2 == 0) {
+        // Anak GENAP: kerja cepat, jadi zombie
+        sleep_time = 2 + rand() % 3; // 2–4 detik
+        snprintf(msg, sizeof(msg),
+                 "Child %d (PID: %d) will work for %d seconds (quick exit)",
+                 child_id, getpid(), sleep_time);
+        log_message(msg);
+        sleep(sleep_time);
+        snprintf(msg, sizeof(msg),
+                 "Child %d (PID: %d) finished work and exiting",
+                 child_id, getpid());
+        log_message(msg);
+        exit(child_id);
+    } else {
+        // Anak GANJIL: kerja tanpa akhir (infinite sleep)
+        snprintf(msg, sizeof(msg),
+                 "Child %d (PID: %d) entering infinite work loop (never exit)",
+                 child_id, getpid());
+        log_message(msg);
+        while (1) {
+            sleep(10); // biar ga makan CPU, tapi gak pernah exit
+        }
+    }
+}
+```
