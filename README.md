@@ -269,7 +269,7 @@ https://youtu.be/I5RwueNTwR4
 5. Linux Manual Pages. "fork(2) - Linux manual page." https://man7.org/linux/man-pages/man2/fork.2.html
 
 # Modifikasi
-Studi kasus dari Bu Henning memodifikasi program **Zombie Cleaner Daemon** yang sebelumnya membuat 5 child process yang semuanya menjadi zombie. Pada versi modifikasi ini, hanya ```**child** dengan ID genap (2 dan 4)``` yang akan menjadi **zombie**, sedangkan *child* dengan **ID ganjil (1, 3, dan 5)** tetap aktif dan tidak menjadi zombie.
+Studi kasus dari Bu Henning untuk memodifikasi program **Zombie Cleaner Daemon** yang sebelumnya membuat 5 child process yang semuanya menjadi zombie. Pada versi modifikasi ini, hanya ```**child** dengan ID genap (2 dan 4)``` yang akan menjadi **zombie**, sedangkan *child* dengan **ID ganjil (1, 3, dan 5)** tetap aktif dan tidak menjadi zombie.
 
 **Bagian yang ```dimodivikasi``` dari Versi Sebelumnya**
 
